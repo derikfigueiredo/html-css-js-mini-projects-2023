@@ -1,0 +1,71 @@
+/*ESTUDAR TRANSIÇÕES E LINEAR-GRADIANT*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container {
+    position: relative;
+    padding: 15px;
+    max-width: 830px;
+    margin: 0 auto;
+}
+
+.slider-content {
+    overflow: auto;
+}
+
+.slider-content::-webkit-scrollbar {
+    display: none;
+}
+
+.slider {
+    
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 15px;
+    width: 500px;
+}
+
+.slider img {
+    width: 500px;
+    opacity: 0.5;
+}
+
+img.current-item {
+    opacity: 1;
+}
+
+
+.arrow-left, .arrow-right {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 40px;
+    font-size: 30px;
+    color: #fff;
+    background: linear-gradient(to left, transparent 0%, black 200%);
+    opacity: 0;
+    transition: all 600ms ease-in-out;
+    border: 0;
+}
+
+.arrow-right {
+    left: auto;
+    right: 0;
+    background: linear-gradient(to right, transparent 0%, black 200%);
+}
+
+.arrow-left:hover, .arrow-right:hover {
+    opacity: 1;
+}
+
